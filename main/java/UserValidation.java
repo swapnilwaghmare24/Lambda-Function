@@ -18,4 +18,11 @@ public class UserValidation {
         boolean result = matcher.matches();
         return result;
     }
+    public boolean email(String email) {
+        String emailPattern = "[a-z]+[.]?[a-z]*@[a-z]+.[a-z]+[.a-z]*";
+        Pattern pattern = Pattern.compile(emailPattern);
+        Matcher matcher = pattern.matcher(email);
+        boolean result = matcher.matches();
+        return result;
+    }
 }
