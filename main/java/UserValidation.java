@@ -39,4 +39,34 @@ public class UserValidation {
         Boolean result = matcher.matches();
         return result;
     }
+    public static void main(String[] args) {
+        UserValidationCustomException userValidationCustomException=new UserValidationCustomException();
+        try {
+            userValidationCustomException.firstName();
+        } catch (CustomException e) {
+            System.out.println(e);
+        }
+        try {
+            userValidationCustomException.lastName();
+        } catch (CustomException e) {
+            System.out.println(e);
+        }
+        try {
+            userValidationCustomException.email();
+        } catch (CustomException e) {
+            System.out.println(e);
+        }
+        try {
+            userValidationCustomException.mobileNumber();
+        } catch (CustomException e) {
+            System.out.println(e);
+        }
+        try {
+            userValidationCustomException.password();
+        } catch (CustomException e) {
+            System.out.println(e);
+        }
+
+    }
 }
+
