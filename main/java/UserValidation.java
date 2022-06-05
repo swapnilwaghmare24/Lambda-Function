@@ -32,4 +32,11 @@ public class UserValidation {
         Boolean result = matcher.matches();
         return result;
     }
+    public boolean password(String passWord) {
+        String PasswordPattern = "^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&])[a-zA-Z0-9@#$%^&]{8,}$";
+        Pattern pattern = Pattern.compile(PasswordPattern);
+        Matcher matcher = pattern.matcher(passWord);
+        Boolean result = matcher.matches();
+        return result;
+    }
 }
