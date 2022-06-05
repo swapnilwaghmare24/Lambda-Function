@@ -25,4 +25,11 @@ public class UserValidation {
         boolean result = matcher.matches();
         return result;
     }
+    public boolean mobileNumber(String phoneNumber) {
+        String MobileNumberPattern = "(91-){1}[0-9]{10}";
+        Pattern pattern = Pattern.compile(MobileNumberPattern);
+        Matcher matcher = pattern.matcher(phoneNumber);
+        Boolean result = matcher.matches();
+        return result;
+    }
 }
